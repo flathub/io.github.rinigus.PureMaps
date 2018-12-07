@@ -140,7 +140,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "a51fce8fe0b982abab9347f84fd79a93c2766e82"
+                    "commit": "876ecf12f4327ac1cb9e1d85dead2dfdcdba30f9"
+                },
+                {
+                    "type": "file",
+                    "path": "apikeys.py",
+                    "dest-filename": "tools/apikeys.py"
                 }
             ]
         }
