@@ -81,7 +81,7 @@
                     "type": "git",
                     "url": "https://github.com/rinigus/pkg-mapbox-gl-native.git",
                     "branch": "sfos",
-                    "commit": "426263007b95480d30939648bd92bb6341f8395f"
+                    "commit": "41957b6469a85c28880644f69a487f00023453ba"
                 }
             ]
         },
