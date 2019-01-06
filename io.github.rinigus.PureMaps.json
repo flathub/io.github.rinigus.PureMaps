@@ -15,7 +15,8 @@
         "--talk-name=org.freedesktop.DBus",
         "--socket=pulseaudio"
     ],
-    "cleanup": ["/usr/include", "/usr/tests", "/usr/lib/libqmapboxgl.a", "/usr/lib/pkgconfig", "/opt"],
+    "cleanup": ["/usr/include", "/usr/tests", "/usr/lib/*/libqmapboxgl.a",
+                "/usr/lib/libqmapboxgl.a", "/usr/lib/pkgconfig", "/opt"],
     "rename-icon": "pure-maps", 
     "modules": [
         {
@@ -75,6 +76,9 @@
                 "cp mapbox-gl-native-lib.pro mapbox-gl-native",
                 "qmake mapbox-gl-native/mapbox-gl-native-lib.pro",
                 "make INSTALL_ROOT=/app install"
+            ],
+            "post-install": [
+                "ln -s /app/usr/lib/*/libqmapboxgl.a /app/lib"
             ],
             "sources": [
                 {
