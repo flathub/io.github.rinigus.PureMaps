@@ -78,7 +78,7 @@
                 "make INSTALL_ROOT=/app install"
             ],
             "post-install": [
-                "ln -s /app/usr/lib/*/libqmapboxgl.a /app/lib"
+                "ln -s /app/usr/lib/*/libqmapboxgl.a /app/usr/lib"
             ],
             "sources": [
                 {
