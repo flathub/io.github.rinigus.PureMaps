@@ -13,7 +13,8 @@
         "--talk-name=org.osm.scout.server1",
         /* monitor availibility of OSM Scout Server */
         "--talk-name=org.freedesktop.DBus",
-        "--socket=pulseaudio"
+        "--socket=pulseaudio",
+        "--system-talk-name=org.freedesktop.GeoClue2"
     ],
     "cleanup": ["/usr/include", "/usr/tests", "/usr/lib/*/libqmapboxgl.a",
                 "/usr/lib/libqmapboxgl.a", "/usr/lib/pkgconfig", "/opt"],
