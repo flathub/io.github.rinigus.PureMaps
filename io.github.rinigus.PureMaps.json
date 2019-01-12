@@ -141,11 +141,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 "sed -i 's/binary>pure-maps/binary>io.github.rinigus.PureMaps/' packaging/pure-maps.appdata.xml",
-                "make PREFIX=/app flathub-install",
-                "cp io.github.rinigus.PureMaps /app/bin/io.github.rinigus.PureMaps",
-                "mv /app/share/pure-maps/qml/pure-maps.qml /app/share/pure-maps/qml/io.github.rinigus.PureMaps.qml",
-                "mv /app/share/pure-maps /app/share/io.github.rinigus.PureMaps"
-                
+                "make PREFIX=/app flathub-install"
             ],
             "sources": [
                 {
@@ -157,16 +153,6 @@
                     "type": "file",
                     "path": "apikeys.py",
                     "dest-filename": "tools/apikeys.py"
-                },
-                {
-                    "type": "file",
-                    "path": "io.github.rinigus.PureMaps",
-                    "dest-filename": "io.github.rinigus.PureMaps"
-                },
-                {
-                    "type": "file",
-                    "path": "io.github.rinigus.PureMaps.desktop",
-                    "dest-filename": "packaging/flatpak/io.github.rinigus.PureMaps.desktop"
                 }
             ]
         }
