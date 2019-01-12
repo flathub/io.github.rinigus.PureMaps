@@ -17,7 +17,8 @@
         "--system-talk-name=org.freedesktop.GeoClue2"
     ],
     "cleanup": ["/usr/include", "/usr/tests", "/usr/lib/*/libqmapboxgl.a",
-                "/usr/lib/libqmapboxgl.a", "/usr/lib/pkgconfig", "/opt"],
+                "/usr/lib/libqmapboxgl.a", "/usr/lib/pkgconfig", "/opt",
+                "/lib/*.a", "/lib/*.la"],
     "rename-icon": "pure-maps", 
     "modules": [
         {
@@ -139,7 +140,9 @@
             "name": "pure-maps",
             "buildsystem": "simple",
             "build-commands": [
-                "make PREFIX=/app flathub-install"
+                "make PREFIX=/app flathub-install",
+                "cp io.github.rinigus.PureMaps /app/bin/io.github.rinigus.PureMaps",
+                "ln -s /app/share/pure-maps /app/share/io.github.rinigus.PureMaps"
             ],
             "sources": [
                 {
@@ -151,6 +154,16 @@
                     "type": "file",
                     "path": "apikeys.py",
                     "dest-filename": "tools/apikeys.py"
+                },
+                {
+                    "type": "file",
+                    "path": "io.github.rinigus.PureMaps",
+                    "dest-filename": "io.github.rinigus.PureMaps"
+                },
+                {
+                    "type": "file",
+                    "path": "io.github.rinigus.PureMaps.desktop",
+                    "dest-filename": "packaging/flatpak/io.github.rinigus.PureMaps.desktop"
                 }
             ]
         }
