@@ -14,6 +14,7 @@
         /* monitor availibility of OSM Scout Server */
         "--talk-name=org.freedesktop.DBus",
         "--socket=pulseaudio",
+        /* geoclue support */
         "--system-talk-name=org.freedesktop.GeoClue2"
     ],
     "cleanup": ["/usr/include", "/usr/tests", "/usr/lib/*/libqmapboxgl.a",
