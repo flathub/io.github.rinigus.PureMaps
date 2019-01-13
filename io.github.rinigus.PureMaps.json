@@ -1,9 +1,9 @@
 {
     "app-id": "io.github.rinigus.PureMaps",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.11",
+    "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
-    "command": "pure-maps",
+    "command": "io.github.rinigus.PureMaps",
     "finish-args": [
         "--device=dri",
         "--share=ipc",
@@ -13,9 +13,13 @@
         "--talk-name=org.osm.scout.server1",
         /* monitor availibility of OSM Scout Server */
         "--talk-name=org.freedesktop.DBus",
-        "--socket=pulseaudio"
+        "--socket=pulseaudio",
+        /* geoclue support */
+        "--system-talk-name=org.freedesktop.GeoClue2"
     ],
-    "cleanup": ["/usr/include", "/usr/tests", "/usr/lib/libqmapboxgl.a", "/usr/lib/pkgconfig", "/opt"],
+    "cleanup": ["/usr/include", "/usr/tests", "/usr/lib/*/libqmapboxgl.a",
+                "/usr/lib/libqmapboxgl.a", "/usr/lib/pkgconfig", "/opt",
+                "/lib/*.a", "/lib/*.la"],
     "rename-icon": "pure-maps", 
     "modules": [
         {
@@ -75,6 +79,9 @@
                 "cp mapbox-gl-native-lib.pro mapbox-gl-native",
                 "qmake mapbox-gl-native/mapbox-gl-native-lib.pro",
                 "make INSTALL_ROOT=/app install"
+            ],
+            "post-install": [
+                "ln -s /app/usr/lib/*/libqmapboxgl.a /app/usr/lib"
             ],
             "sources": [
                 {
@@ -140,7 +147,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "0fd3acecc23a66400d28a1b0efc593a85749654d"
+                    "commit": "8c94de574bedac1ec6f2a6fd8a2d6bce4be3cc34"
                 },
                 {
                     "type": "file",
