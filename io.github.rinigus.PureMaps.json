@@ -146,8 +146,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "8c94de574bedac1ec6f2a6fd8a2d6bce4be3cc34"
+                    "url": "https://github.com/rinigus/pure-maps.git"
                 },
                 {
                     "type": "file",
