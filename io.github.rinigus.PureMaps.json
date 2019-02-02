@@ -141,13 +141,13 @@
             "name": "pure-maps",
             "buildsystem": "simple",
             "build-commands": [
-                "make PREFIX=/app flathub-install"
+                "make PREFIX=/app flathub-install-qtcontrols"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "8c94de574bedac1ec6f2a6fd8a2d6bce4be3cc34"
+                    "commit": "5b0c9162f61a8c2ec2c4cf3852fba8f4fd3b9b89"
                 },
                 {
                     "type": "file",
