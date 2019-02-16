@@ -120,7 +120,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/qmlrunner.git",
-                    "commit": "d5b1dd3c4085adf1e8fd2e498cfacfc08b2da037"
+                    "commit": "dfa22a04edd2f1804c47e594093af2bed884c1ca"
                 }
             ]
         },
@@ -141,13 +141,13 @@
             "name": "pure-maps",
             "buildsystem": "simple",
             "build-commands": [
-                "make PREFIX=/app flathub-install-qtcontrols"
+                "make PREFIX=/app flathub-install-kirigami"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "5b0c9162f61a8c2ec2c4cf3852fba8f4fd3b9b89"
+                    "commit": "c87d81464082176a2c0416768ab41b17e96ff427"
                 },
                 {
                     "type": "file",
