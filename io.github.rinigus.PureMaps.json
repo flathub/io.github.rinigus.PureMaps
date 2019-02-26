@@ -122,7 +122,6 @@
                 {
                     "type": "git",
                     "url": "git://anongit.kde.org/extra-cmake-modules.git",
-                    "branch": "v5.55.0",
                     "commit": "f8c5a482e3571c185f9b759b157985528b6baf91"
                 }
             ]
@@ -136,7 +135,6 @@
                 {
                     "type": "git",
                     "url": "git://anongit.kde.org/kirigami.git",
-                    "branch": "master",
                     "commit": "ace5d2262c900a11f2e2425a80ff585a22f5c793"
                 }
             ]
