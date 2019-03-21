@@ -20,7 +20,7 @@
     "cleanup": ["/usr/include", "/usr/tests", "/usr/lib/*/libqmapboxgl.a",
                 "/usr/lib/libqmapboxgl.a", "/usr/lib/pkgconfig", "/opt",
                 "/lib/*.a", "/lib/*.la"],
-    "rename-icon": "pure-maps", 
+    "rename-icon": "pure-maps",
     "modules": [
         {
             "name": "nemodbus",
@@ -114,19 +114,6 @@
             ]
         },
         {
-            "name": "extra-cmake-modules",
-            "cleanup-platform": ["*"],
-            "buildsystem": "cmake-ninja",
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "git://anongit.kde.org/extra-cmake-modules.git",
-                    "commit": "f8c5a482e3571c185f9b759b157985528b6baf91"
-                }
-            ]
-        },
-        {
             "name": "kirigami",
             "config-opts": ["-DENABLE_TESTING=OFF", "-DPLASMA_ENABLED=OFF"],
             "buildsystem": "cmake-ninja",
@@ -135,7 +122,7 @@
                 {
                     "type": "git",
                     "url": "git://anongit.kde.org/kirigami.git",
-                    "commit": "ace5d2262c900a11f2e2425a80ff585a22f5c793"
+                    "commit": "3acb0b7f452ba457353beee1339d59ccb22be8c2"
                 }
             ]
         },
@@ -146,7 +133,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/qmlrunner.git",
-                    "commit": "490244ebd7c7e2d13d00218b9a5e9f10fa9f5e18"
+                    "commit": "9b48bb0f6e3cf6a5e1e29541cf4ab17477775845"
                 }
             ]
         },
@@ -173,7 +160,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "49988bb2cd92e88b58bcd574644c9da9ce5baa11"
+                    "commit": "2b3546d192cd1749f5edec156eeb8a2a171ca4cd"
                 },
                 {
                     "type": "file",
