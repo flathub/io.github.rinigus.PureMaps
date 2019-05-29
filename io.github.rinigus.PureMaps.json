@@ -154,7 +154,7 @@
             "name": "pure-maps",
             "buildsystem": "simple",
             "build-commands": [
-                "make PREFIX=/app flathub-install-kirigami"
+                "make PREFIX=/app INCLUDE_GPXPY=yes flathub-install-kirigami"
             ],
             "sources": [
                 {
