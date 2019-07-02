@@ -122,7 +122,7 @@
                 {
                     "type": "git",
                     "url": "git://anongit.kde.org/kirigami.git",
-                    "commit": "2096c6b03e63430a870c9f21d1b0fb1c6e6f59b4"
+                    "commit": "e508c78fbdb9dd1785a7bb00654e2aba88d3bc0a"
                 }
             ]
         },
