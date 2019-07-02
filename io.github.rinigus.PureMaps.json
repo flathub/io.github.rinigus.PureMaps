@@ -122,7 +122,7 @@
                 {
                     "type": "git",
                     "url": "git://anongit.kde.org/kirigami.git",
-                    "commit": "3acb0b7f452ba457353beee1339d59ccb22be8c2"
+                    "commit": "e508c78fbdb9dd1785a7bb00654e2aba88d3bc0a"
                 }
             ]
         },
@@ -160,7 +160,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "6378463a6ad6c5f0fc67effcd7e132b8a02aa570"
+                    "commit": "48a48ca59ab29034f62e49b6a43be43f2b835b86"
                 },
                 {
                     "type": "file",
