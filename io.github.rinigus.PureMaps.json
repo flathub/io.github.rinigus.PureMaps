@@ -108,8 +108,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/rinigus/mapbox-gl-qml/archive/1.5.0.1.tar.gz",
-                    "sha256":  "5016189c42583a7812643d1d9a2c1792f6185a3d"
+                    "url": "https://github.com/rinigus/mapbox-gl-qml/archive/1.5.0.3.tar.gz",
+                    "sha256":  "71a2b0e527166930f0ac6986549c9de029adb30cf032089fbb8f61206bc5bbb2"
                 }
             ]
         },
