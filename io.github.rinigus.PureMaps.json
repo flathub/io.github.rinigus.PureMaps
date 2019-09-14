@@ -176,7 +176,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "18340b1cc0ddcedcc8941c2c23c5cf37b7ac08ba"
+                    "commit": "8a8b276bd166729e122a416e980885011ff05a09"
                 },
                 {
                     "type": "file",
