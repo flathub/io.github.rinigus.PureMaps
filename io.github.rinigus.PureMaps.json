@@ -20,7 +20,6 @@
     "cleanup": ["/usr/include", "/usr/tests", "/usr/lib/*/libqmapboxgl.a",
                 "/usr/lib/libqmapboxgl.a", "/usr/lib/pkgconfig", "/opt",
                 "/lib/*.a", "/lib/*.la"],
-    "rename-icon": "pure-maps",
     "modules": [
         {
             "name": "nemodbus",
