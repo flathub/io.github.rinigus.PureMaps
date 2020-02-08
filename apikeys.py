@@ -9,8 +9,8 @@
 
 Keys = {
     # https://developer.foursquare.com
-    "<FOURSQUARE_CLIENT>": "",
-    "<FOURSQUARE_SECRET>": "",
+    "<FOURSQUARE_CLIENT>": "VPHEZ1S5LTHEXFI4NUTYQOOONQ4MVP0USSXOFNQC2LWFVCRD",
+    "<FOURSQUARE_SECRET>": "WEVXECMIGNCHHQLUIUOIWM50IVBHR5QNMTMRGATKTBWAKPXP",
 
     # mapbox.com
     "<MAPBOX_KEY>": "pk.eyJ1IjoicmluaWd1cyIsImEiOiJjanBib3IyN3QweXF0M2tzYm5pbXIwejdpIn0.d63Ltm5lDFs2wT2lp_P-sg",

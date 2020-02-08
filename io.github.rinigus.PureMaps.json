@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.rinigus.PureMaps",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.12",
+    "runtime-version": "5.14",
     "sdk": "org.kde.Sdk",
     "command": "io.github.rinigus.PureMaps",
     "finish-args": [
@@ -80,14 +80,15 @@
                 "make INSTALL_ROOT=/app install"
             ],
             "post-install": [
-                "ln -s /app/usr/lib/*/libqmapboxgl.a /app/usr/lib"
+                "ln -s /app/usr/lib/*/libqmapboxgl.so* /app/usr/lib",
+                "ln -s /app/usr/lib/libqmapboxgl.so* /app/lib"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pkg-mapbox-gl-native.git",
-                    "branch": "sfos",
-                    "commit": "f54c222cc34b2ca8356977903768ba69d58ddaf4"
+                    "branch": "qt-regular",
+                    "commit": "0d63f5661ed15d43fbbf0462d82c85e634a2e8d7"
                 }
             ]
         },
@@ -130,19 +131,6 @@
             ]
         },
         {
-            "name": "kirigami",
-            "config-opts": ["-DENABLE_TESTING=OFF", "-DPLASMA_ENABLED=OFF"],
-            "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "git://anongit.kde.org/kirigami.git",
-                    "commit": "00ccd901981670df2ff2b728ae42a7acd53ea892"
-                }
-            ]
-        },
-        {
             "name": "qmlrunner",
             "buildsystem": "qmake",
             "sources": [
@@ -176,7 +164,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "63b5fd41b71f198487722e1ed683e137de9204f7"
+                    "commit": "8e55b42dae6b81536831d106b3c44200ffb2fcad"
                 },
                 {
                     "type": "file",
