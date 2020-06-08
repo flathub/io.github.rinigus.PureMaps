@@ -73,22 +73,20 @@
         },
         {
             "name": "mapbox-gl-native-qt",
-            "buildsystem": "simple",
-            "build-commands": [
-                "cp mapbox-gl-native-lib.pro mapbox-gl-native",
-                "qmake mapbox-gl-native/mapbox-gl-native-lib.pro",
-                "make INSTALL_ROOT=/app install"
-            ],
-            "post-install": [
-                "ln -s /app/usr/lib/*/libqmapboxgl.so* /app/usr/lib",
-                "ln -s /app/usr/lib/libqmapboxgl.so* /app/lib"
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DMBGL_WITH_QT=ON",
+                "-DMBGL_WITH_WERROR=OFF",
+                "-DMBGL_WITH_QT_HEADLESS=OFF",
+                "-DMBGL_WITH_QT_TEST=OFF",
+                "-DMBGL_WITH_QT_DEMO=OFF"
             ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/rinigus/pkg-mapbox-gl-native.git",
-                    "branch": "qt-regular",
-                    "commit": "0d63f5661ed15d43fbbf0462d82c85e634a2e8d7"
+                    "url": "https://github.com/rinigus/mapbox-gl-native.git",
+                    "branch": "mapbox-update-200607",
+                    "commit": "f36a0f78dcf869392aa3252c07a723853a21e5a5"
                 }
             ]
         },
@@ -96,8 +94,9 @@
             "name": "mapbox-gl-qml",
             "buildsystem": "qmake",
             "config-opts": [
-                "INCLUDEPATH+=/app/usr/include",
-                "LIBS+=-L/app/usr/lib"
+                "INCLUDEPATH+=/app/include",
+                "INCLUDEPATH+=/app/include/qt5",
+                "LIBS+=-L/app/lib"
             ],
             "make-install-args": [
                 "INSTALL_ROOT=/app"
@@ -108,8 +107,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/rinigus/mapbox-gl-qml/archive/1.5.0.3.tar.gz",
-                    "sha256":  "a136c5bd358f8004d2eabc58a9711601a4107ff2d53263aad71925bbfa6bb8dd"
+                    "url": "https://github.com/rinigus/mapbox-gl-qml/archive/1.6.0.tar.gz",
+                    "sha256":  "2e47c61491fdde62d0554636839d0e54f448ffac7358b910910c90525720bea9"
                 }
             ]
         },
@@ -164,7 +163,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "c3fc574fb9703e70c6af1315e8c9795a8d7684aa"
+                    "commit": "72cd029bfa32cab1bbb039d2df7d2ff0d55b81e3"
                 },
                 {
                     "type": "file",
