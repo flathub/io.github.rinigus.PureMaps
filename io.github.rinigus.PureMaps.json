@@ -108,8 +108,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/rinigus/mapbox-gl-qml/archive/1.5.0.3.tar.gz",
-                    "sha256":  "a136c5bd358f8004d2eabc58a9711601a4107ff2d53263aad71925bbfa6bb8dd"
+                    "url": "https://github.com/rinigus/mapbox-gl-qml/archive/1.7.0.tar.gz",
+                    "sha256":  "9751c29180aae1fa5ad33031060bc11e6890b41159c831634ccee312d975ea14"
                 }
             ]
         },
@@ -164,7 +164,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "c3fc574fb9703e70c6af1315e8c9795a8d7684aa"
+                    "commit": "39810e660162232257f3b332973d291ba101a6d6"
                 },
                 {
                     "type": "file",
