@@ -86,7 +86,7 @@
                     "type": "git",
                     "url": "https://github.com/rinigus/mapbox-gl-native.git",
                     "branch": "mapbox-update-200607",
-                    "commit": "f36a0f78dcf869392aa3252c07a723853a21e5a5",
+                    "commit": "f3643352b43859bbdc55dc028bdb50d50d2e03b7",
                     "disable-shallow-clone": true
                 }
             ]
