@@ -158,7 +158,10 @@
             "name": "pure-maps",
             "buildsystem": "simple",
             "build-commands": [
-                "make PREFIX=/app INCLUDE_GPXPY=yes flathub-install-kirigami"
+                "qmake PREFIX=/app CONFIG+=install_gpxpy FLAVOR=kirigami APP_NAME=io.github.rinigus.PureMaps pure-maps.pro",
+                "make -j $FLATPAK_BUILDER_N_JOBS install",
+                "install -D packaging/flatpak/osmscout-server /app/bin/osmscout-server",
+                "ln -s /app/share /app/usr"
             ],
             "sources": [
                 {
