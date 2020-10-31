@@ -114,34 +114,6 @@
             ]
         },
         {
-            "name": "clipboard-qml",
-            "buildsystem": "qmake",
-            "make-install-args": [
-                "INSTALL_ROOT=/app"
-            ],
-            "post-install": [
-                "ln -s /app/usr/lib/qml/Clipboard /app/lib/qml"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/rinigus/qml-module-clipboard.git",
-                    "commit": "47a0aefb515bc53e20028d5eb741a163f73613f3"
-                }
-            ]
-        },
-        {
-            "name": "qmlrunner",
-            "buildsystem": "qmake",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/rinigus/qmlrunner.git",
-                    "commit": "1ecc5c64fc5bf216bd56f42a5308bd69be4000c3"
-                }
-            ]
-        },
-        {
             "name": "mimic1",
             "config-opts": [
                 "--with-audio=none"
@@ -167,8 +139,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "branch": "qmake",
-                    "commit": "79a105ad81ca542095d6691a76b111b16021d2c4"
+                    "branch": "master",
+                    "commit": "ba6f7328fd6dadba5ece5cce61d3ebeb3fd530f1"
                 },
                 {
                     "type": "file",
