@@ -114,6 +114,24 @@
             ]
         },
         {
+            "name": "s2geometry",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_PYTHON=OFF",
+                "-DBUILD_TESTING=OFF",
+                "-DBUILD_SHARED_LIBS=ON",
+                "-DBUILD_EXAMPLES=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/rinigus/s2geometry.git",
+                    "branch": "main-dev",
+                    "commit": "c079651928ae25a670d30d54afe1e209e9958763"
+                }
+            ]
+        },
+        {
             "name": "mimic1",
             "config-opts": [
                 "--with-audio=none"
@@ -130,7 +148,7 @@
             "name": "pure-maps",
             "buildsystem": "simple",
             "build-commands": [
-                "qmake PREFIX=/app CONFIG+=install_gpxpy FLAVOR=kirigami APP_NAME=io.github.rinigus.PureMaps pure-maps.pro",
+                "qmake PREFIX=/app CONFIG+=install_gpxpy FLAVOR=kirigami S2INCLUDES=/app/include S2LIBS=-L/app/lib APP_NAME=io.github.rinigus.PureMaps pure-maps.pro",
                 "make -j $FLATPAK_BUILDER_N_JOBS install",
                 "install -D packaging/flatpak/osmscout-server /app/bin/osmscout-server",
                 "ln -s /app/share /app/usr"
@@ -140,7 +158,7 @@
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
                     "branch": "master",
-                    "commit": "ba6f7328fd6dadba5ece5cce61d3ebeb3fd530f1"
+                    "commit": "8919522f8b8c2fd7b3e15adb186ea6e21c1dc020"
                 },
                 {
                     "type": "file",
