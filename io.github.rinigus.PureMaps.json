@@ -52,8 +52,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/thp/pyotherside/archive/1.5.3.tar.gz",
-                    "sha256": "00049d5f42cac448368bc2a521edb8de36bb6d2a624e195b7f1004236758b805"
+                    "url": "https://github.com/thp/pyotherside/archive/1.5.9.tar.gz",
+                    "sha256": "189cb0b973e40fcb6b95fd51b0bcd6cc8494b514d49ffe966ec488cf05bbf51e"
                 }
             ]
         },
