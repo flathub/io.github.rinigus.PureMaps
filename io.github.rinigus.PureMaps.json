@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.rinigus.PureMaps",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.14",
+    "runtime-version": "5.15",
     "sdk": "org.kde.Sdk",
     "command": "io.github.rinigus.PureMaps",
     "finish-args": [
@@ -158,7 +158,7 @@
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
                     "branch": "master",
-                    "commit": "6e2eb5efe380a3f2248b5ee5351e7020ce71e7d4"
+                    "commit": "5ff7574609f27ac66bccdb30a3ad00d2f33bb67e"
                 },
                 {
                     "type": "file",
