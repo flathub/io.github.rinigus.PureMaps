@@ -10,7 +10,7 @@
         "--socket=x11",
         "--socket=wayland",
         "--share=network",
-        "--talk-name=org.osm.scout.server1",
+        "--talk-name=io.github.rinigus.OSMScoutServer",
         /* monitor availibility of OSM Scout Server */
         "--talk-name=org.freedesktop.DBus",
         "--socket=pulseaudio",
@@ -162,7 +162,7 @@
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
                     "branch": "master",
-                    "commit": "50f9147919900a50d1bb5903a3d31ee26d5875eb"
+                    "commit": "3657200f13e3b813bdd3c84513766914d9a7a702"
                 },
                 {
                     "type": "file",
