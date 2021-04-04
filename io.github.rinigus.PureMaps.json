@@ -159,6 +159,9 @@
 		"-DMAPMATCHING_CHECK_RUNTIME=OFF",
 		"-DMAPMATCHING_AVAILABLE=ON"
 	    ],
+	    "post-install": [
+		"ln -s /app/share /app/usr"
+	    ],
             "sources": [
                 {
                     "type": "git",
