@@ -150,19 +150,21 @@
         },
         {
             "name": "pure-maps",
-            "buildsystem": "simple",
-            "build-commands": [
-                "qmake PREFIX=/app CONFIG+=install_gpxpy FLAVOR=kirigami S2INCLUDES=/app/include S2LIBS=-L/app/lib APP_NAME=io.github.rinigus.PureMaps pure-maps.pro",
-                "make -j $FLATPAK_BUILDER_N_JOBS install",
-                "install -D packaging/flatpak/osmscout-server /app/bin/osmscout-server",
-                "ln -s /app/share /app/usr"
-            ],
+            "buildsystem": "cmake-ninja",
+	    "builddir": true,
+            "config-opts": [
+		"-DFLAVOR=kirigami",
+		"-DAPP_NAME=io.github.rinigus.PureMaps",
+		"-DUSE_BUNDLED_GPXPY=ON",
+		"-DMAPMATCHING_CHECK_RUNTIME=OFF",
+		"-DMAPMATCHING_AVAILABLE=ON"
+	    ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "branch": "master",
-                    "commit": "3657200f13e3b813bdd3c84513766914d9a7a702"
+                    "branch": "cmake",
+                    "commit": "5027873ad5743046bd67cba910c751d2e4f42ded"
                 },
                 {
                     "type": "file",
