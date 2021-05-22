@@ -166,8 +166,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "branch": "cmake",
-                    "commit": "5027873ad5743046bd67cba910c751d2e4f42ded"
+                    "branch": "master",
+                    "commit": "8380ed204f9b86a813f6d3c3d1876971ccc2a080"
                 },
                 {
                     "type": "file",
