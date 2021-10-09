@@ -35,8 +35,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://git.merproject.org/mer-core/nemo-qml-plugin-dbus/-/archive/2.1.20/nemo-qml-plugin-dbus-2.1.20.tar.gz",
-                    "sha256": "d52b97d700ee17e3f20b1dcb84c58502d54d12fcec487a5da22061298f811075"
+                    "url": "https://github.com/sailfishos/nemo-qml-plugin-dbus/archive/refs/tags/2.1.27.tar.gz",
+                    "sha256": "d4952879578dc3be3bd805d9389bf514c870987c74b7121320ea98faefa95031"
                 }
             ]
         },
