@@ -30,7 +30,7 @@
             "post-install": [
                 "mkdir -p /app/lib/qml",
                 "ln -s /app/usr/lib/qml/Nemo /app/lib/qml",
-                "ln -s /app/usr/lib/lib* /app/lib"
+		"ln -s /app/usr/lib/*/lib* /app/lib"
             ],
             "sources": [
                 {
