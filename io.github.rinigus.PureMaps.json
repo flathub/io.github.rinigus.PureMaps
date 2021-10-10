@@ -172,7 +172,7 @@
                 {
                     "type": "file",
                     "path": "apikeys.py",
-                    "dest-filename": "tools/apikeys.py"
+                    "dest": "tools"
                 }
             ]
         }
