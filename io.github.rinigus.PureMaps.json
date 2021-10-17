@@ -30,13 +30,13 @@
             "post-install": [
                 "mkdir -p /app/lib/qml",
                 "ln -s /app/usr/lib/qml/Nemo /app/lib/qml",
-                "ln -s /app/usr/lib/lib* /app/lib"
+		"ln -s /app/usr/lib/*/lib* /app/lib"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://git.merproject.org/mer-core/nemo-qml-plugin-dbus/-/archive/2.1.20/nemo-qml-plugin-dbus-2.1.20.tar.gz",
-                    "sha256": "d52b97d700ee17e3f20b1dcb84c58502d54d12fcec487a5da22061298f811075"
+                    "url": "https://github.com/sailfishos/nemo-qml-plugin-dbus/archive/refs/tags/2.1.27.tar.gz",
+                    "sha256": "d4952879578dc3be3bd805d9389bf514c870987c74b7121320ea98faefa95031"
                 }
             ]
         },
@@ -167,12 +167,12 @@
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
                     "branch": "master",
-                    "commit": "52b036dd6e39b3f16d7dc7ddd63475c395d3b2c9"
+                    "commit": "2a05f4f5849de30d1bdeefa705d5f57ce173c266"
                 },
                 {
                     "type": "file",
                     "path": "apikeys.py",
-                    "dest-filename": "tools/apikeys.py"
+                    "dest": "tools"
                 }
             ]
         }
