@@ -85,7 +85,6 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/mapbox-gl-native.git",
-                    "branch": "mapbox-update-200607",
                     "commit": "f3643352b43859bbdc55dc028bdb50d50d2e03b7",
                     "disable-shallow-clone": true
                 }
@@ -126,7 +125,6 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/s2geometry.git",
-                    "branch": "main",
                     "commit": "dacdf1d3b0f229d85f30a496f65edfd10049b2fb"
                 }
             ]
@@ -166,7 +164,6 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "branch": "master",
                     "commit": "2a05f4f5849de30d1bdeefa705d5f57ce173c266"
                 },
                 {
