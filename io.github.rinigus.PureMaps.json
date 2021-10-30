@@ -157,7 +157,8 @@
 		"-DAPP_NAME=io.github.rinigus.PureMaps",
 		"-DUSE_BUNDLED_GPXPY=ON",
 		"-DMAPMATCHING_CHECK_RUNTIME=OFF",
-		"-DMAPMATCHING_AVAILABLE=ON"
+		"-DMAPMATCHING_AVAILABLE=ON",
+		"-DUSE_BUNDLED_GEOCLUE2=ON"
 	    ],
 	    "post-install": [
 		"ln -s /app/share /app/usr"
