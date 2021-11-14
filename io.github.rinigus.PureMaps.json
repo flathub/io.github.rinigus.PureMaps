@@ -78,8 +78,7 @@
                 "-DMBGL_WITH_QT=ON",
                 "-DMBGL_WITH_WERROR=OFF",
                 "-DMBGL_WITH_QT_HEADLESS=OFF",
-                "-DMBGL_WITH_QT_TEST=OFF",
-                "-DMBGL_WITH_QT_DEMO=OFF"
+                "-DMBGL_WITH_QT_LIB_ONLY=ON"
             ],
             "sources": [
                 {
