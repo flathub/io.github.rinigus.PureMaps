@@ -125,7 +125,6 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/s2geometry.git",
-                    "branch": "main",
                     "commit": "dacdf1d3b0f229d85f30a496f65edfd10049b2fb"
                 }
             ]
@@ -166,7 +165,6 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "branch": "master",
                     "commit": "ae3ffa85f881db1f64c687dd3b9483e0bda6643d"
                 },
                 {
