@@ -78,15 +78,13 @@
                 "-DMBGL_WITH_QT=ON",
                 "-DMBGL_WITH_WERROR=OFF",
                 "-DMBGL_WITH_QT_HEADLESS=OFF",
-                "-DMBGL_WITH_QT_TEST=OFF",
-                "-DMBGL_WITH_QT_DEMO=OFF"
+                "-DMBGL_WITH_QT_LIB_ONLY=ON"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/mapbox-gl-native.git",
-                    "branch": "mapbox-update-200607",
-                    "commit": "f3643352b43859bbdc55dc028bdb50d50d2e03b7",
+                    "commit": "007a3bd53811db3b01464c5968a42dc4d80f34e8",
                     "disable-shallow-clone": true
                 }
             ]
@@ -126,7 +124,6 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/s2geometry.git",
-                    "branch": "main",
                     "commit": "dacdf1d3b0f229d85f30a496f65edfd10049b2fb"
                 }
             ]
@@ -157,7 +154,8 @@
 		"-DAPP_NAME=io.github.rinigus.PureMaps",
 		"-DUSE_BUNDLED_GPXPY=ON",
 		"-DMAPMATCHING_CHECK_RUNTIME=OFF",
-		"-DMAPMATCHING_AVAILABLE=ON"
+		"-DMAPMATCHING_AVAILABLE=ON",
+		"-DUSE_BUNDLED_GEOCLUE2=ON"
 	    ],
 	    "post-install": [
 		"ln -s /app/share /app/usr"
@@ -166,8 +164,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "branch": "master",
-                    "commit": "2a05f4f5849de30d1bdeefa705d5f57ce173c266"
+                    "commit": "07938f5b6896dcb098aa91fe3c4917d1bd6c2246"
                 },
                 {
                     "type": "file",
