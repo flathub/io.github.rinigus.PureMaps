@@ -106,6 +106,7 @@
         {
             "name": "s2geometry",
             "buildsystem": "cmake-ninja",
+	    "builddir": true,
             "config-opts": [
                 "-DBUILD_PYTHON=OFF",
                 "-DBUILD_TESTING=OFF",
