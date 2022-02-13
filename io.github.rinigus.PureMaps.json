@@ -95,14 +95,14 @@
         {
             "name": "mapbox-gl-qml",
             "buildsystem": "cmake-ninja",
-            "post-install": [
-                "ln -s /app/usr/lib/qml/MapboxMap /app/lib/qml"
-            ],
+            "config-opts": [
+                "-DQT_INSTALL_QML=/app/lib/qml"
+	    ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/mapbox-gl-qml.git",
-                    "commit": "d89d094035fd2c65542dbb53685fc4e30903d2a7"
+                    "commit": "a69591fc454309ff12d0f35d57b673a9f97e6aa2"
                 }
             ]
         },
