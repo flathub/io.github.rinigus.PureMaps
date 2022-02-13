@@ -102,7 +102,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/mapbox-gl-qml.git",
-                    "commit": "a69591fc454309ff12d0f35d57b673a9f97e6aa2"
+                    "commit": "7b123ba2cae17cc18ac2d348d6d3a1ce659db18b"
                 }
             ]
         },
