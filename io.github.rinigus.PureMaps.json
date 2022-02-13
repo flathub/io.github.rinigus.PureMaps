@@ -80,6 +80,9 @@
                 "-DMBGL_WITH_QT_HEADLESS=OFF",
                 "-DMBGL_WITH_QT_LIB_ONLY=ON"
             ],
+            "post-install": [
+                "ln -s /app/include/qt5/* /app/include"
+            ],
             "sources": [
                 {
                     "type": "git",
