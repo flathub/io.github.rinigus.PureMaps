@@ -91,15 +91,7 @@
         },
         {
             "name": "mapbox-gl-qml",
-            "buildsystem": "qmake",
-            "config-opts": [
-                "INCLUDEPATH+=/app/include",
-                "INCLUDEPATH+=/app/include/qt5",
-                "LIBS+=-L/app/lib"
-            ],
-            "make-install-args": [
-                "INSTALL_ROOT=/app"
-            ],
+            "buildsystem": "cmake-ninja",
             "post-install": [
                 "ln -s /app/usr/lib/qml/MapboxMap /app/lib/qml"
             ],
