@@ -72,13 +72,14 @@
             ]
         },
         {
-            "name": "mapbox-gl-native-qt",
+            "name": "maplibre-gl-native-qt",
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DMBGL_WITH_QT=ON",
                 "-DMBGL_WITH_WERROR=OFF",
                 "-DMBGL_WITH_QT_HEADLESS=OFF",
-                "-DMBGL_WITH_QT_LIB_ONLY=ON"
+                "-DMBGL_QT_LIBRARY_ONLY=ON",
+		"-DMBGL_QT_STATIC=OFF"
             ],
             "post-install": [
                 "ln -s /app/include/qt5/* /app/include"
@@ -86,8 +87,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/rinigus/mapbox-gl-native.git",
-                    "commit": "2ee2e2d7acdcc4902af324244e10d244be775e70",
+                    "url": "https://github.com/rinigus/maplibre-gl-native.git",
+                    "commit": "226c4732124ef198ef5ded529b6e9fb01c807386",
                     "disable-shallow-clone": true
                 }
             ]
@@ -102,7 +103,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/mapbox-gl-qml.git",
-                    "commit": "7b123ba2cae17cc18ac2d348d6d3a1ce659db18b"
+                    "commit": "7dd677bdfbefb47a2cbe506381935985167dccab"
                 }
             ]
         },
