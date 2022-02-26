@@ -87,8 +87,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/rinigus/maplibre-gl-native.git",
-                    "commit": "226c4732124ef198ef5ded529b6e9fb01c807386",
+                    "url": "https://github.com/maplibre/maplibre-gl-native.git",
+                    "commit": "e1cd6f829f72a7a26e82f81c00f5876dfc730327",
                     "disable-shallow-clone": true
                 }
             ]
@@ -161,7 +161,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "86b4f973ce0db7554cb3420cb381f8d643f50d68"
+                    "commit": "23a6a6ea19a6dcac8ddd8af25aba9a029a5f25e7"
                 },
                 {
                     "type": "file",
