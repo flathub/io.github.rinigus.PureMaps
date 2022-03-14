@@ -160,8 +160,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "b8269b5cd072431604f5ee4a72b7b8576b0f6fc5"
+                    "url": "https://github.com/pabloyoyoista/pure-maps.git",
+                    "commit": "c6c5b339235f8ea619326e87adbf74d708b51224"
                 },
                 {
                     "type": "file",
