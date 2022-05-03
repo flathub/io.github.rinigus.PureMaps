@@ -17,43 +17,41 @@
         /* geoclue support */
         "--system-talk-name=org.freedesktop.GeoClue2"
     ],
-    "cleanup": ["/usr/include", "/usr/tests", "/usr/lib/*/libqmapboxgl.a",
-                "/usr/lib/libqmapboxgl.a", "/usr/lib/pkgconfig", "/opt",
-                "/lib/*.a", "/lib/*.la"],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/usr",
+        "*.a",
+        "*.la"
+    ],
     "modules": [
         {
             "name": "nemodbus",
             "buildsystem": "qmake",
-            "make-install-args": [
-                "INSTALL_ROOT=/app"
-            ],
-            "post-install": [
-                "mkdir -p /app/lib/qml",
-                "ln -s /app/usr/lib/qml/Nemo /app/lib/qml",
-		"ln -s /app/usr/lib/*/lib* /app/lib"
-            ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://github.com/sailfishos/nemo-qml-plugin-dbus/archive/refs/tags/2.1.27.tar.gz",
                     "sha256": "d4952879578dc3be3bd805d9389bf514c870987c74b7121320ea98faefa95031"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/nemodbus-qmake.patch"
                 }
             ]
         },
         {
             "name": "pyotherside",
             "buildsystem": "qmake",
-            "make-install-args": [
-                "INSTALL_ROOT=/app"
-            ],
-            "post-install": [
-                "ln -s /app/usr/lib/qml/io /app/lib/qml"
-            ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://github.com/thp/pyotherside/archive/1.5.9.tar.gz",
                     "sha256": "189cb0b973e40fcb6b95fd51b0bcd6cc8494b514d49ffe966ec488cf05bbf51e"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/pyotherside-qmake.patch"
                 }
             ]
         },
@@ -127,6 +125,10 @@
         },
         {
             "name": "mimic1",
+            "build-options": {
+                "cflags": "-fcommon",
+                "cxxflags": "-fcommon"
+            },
             "config-opts": [
                 "--with-audio=none"
             ],
@@ -135,10 +137,6 @@
                     "type": "archive",
                     "url": "https://github.com/MycroftAI/mimic1/archive/1.3.0.1.tar.gz",
                     "sha256": "9041f5c7d3720899c90c890ada179c92c3b542b90bb655c247e4a4835df79249"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/mimic1-1.3.0.1-gcc10.patch"
                 }
             ]
         },
