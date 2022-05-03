@@ -1,0 +1,24 @@
+diff --git a/pyotherside.pro b/pyotherside.pro
+index 7b0ef2b..0ed5262 100644
+--- a/pyotherside.pro
++++ b/pyotherside.pro
+@@ -1,5 +1,5 @@
+ TEMPLATE = subdirs
+-SUBDIRS += src tests qtquicktests
++SUBDIRS += src tests
+ 
+ tests.depends = src
+ 
+diff --git a/src/src.pro b/src/src.pro
+index ad3cdfc..31b2dd8 100644
+--- a/src/src.pro
++++ b/src/src.pro
+@@ -10,7 +10,7 @@ TEMPLATE = lib
+ CONFIG += qt plugin
+ QT += qml quick svg
+ 
+-target.path = $$[QT_INSTALL_QML]/$$PLUGIN_IMPORT_PATH
++target.path = $$PREFIX/lib/qml/$$PLUGIN_IMPORT_PATH
+ INSTALLS += target
+ 
+ qmldir.files += qmldir pyotherside.qmltypes

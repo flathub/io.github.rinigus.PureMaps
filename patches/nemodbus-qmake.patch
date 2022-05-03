@@ -1,0 +1,52 @@
+diff --git a/dbus.pro b/dbus.pro
+index 732a171..d4142f1 100644
+--- a/dbus.pro
++++ b/dbus.pro
+@@ -5,7 +5,7 @@ CONFIG += mer-qdoc-template
+ MER_QDOC.project = nemo-qml-plugin-dbus
+ MER_QDOC.config = doc/nemo-qml-plugin-dbus.qdocconf
+ MER_QDOC.style = offline
+-MER_QDOC.path = /usr/share/doc/nemo-qml-plugin-dbus
++MER_QDOC.path = $$PREFIX/share/doc/nemo-qml-plugin-dbus
+ 
+ OTHER_FILES += \
+     rpm/nemo-qml-plugin-dbus-qt5.spec \
+diff --git a/src/nemo-dbus/nemo-dbus.pro b/src/nemo-dbus/nemo-dbus.pro
+index c33f265..433c90d 100644
+--- a/src/nemo-dbus/nemo-dbus.pro
++++ b/src/nemo-dbus/nemo-dbus.pro
+@@ -41,17 +41,17 @@ HEADERS += \
+         logging.h
+ 
+ public_headers.files = $$PUBLIC_HEADERS
+-public_headers.path = /usr/include/nemo-dbus
++public_headers.path = $$PREFIX/include/nemo-dbus
+ 
+ private_headers.files = $$PRIVATE_HEADERS
+-private_headers.path = /usr/include/nemo-dbus/private
++private_headers.path = $$PREFIX/include/nemo-dbus/private
+ 
+-target.path = $$[QT_INSTALL_LIBS]
++target.path = $$PREFIX/lib
+ 
+ QMAKE_PKGCONFIG_NAME = nemodbus
+ QMAKE_PKGCONFIG_DESCRIPTION = Nemo library for DBus
+ QMAKE_PKGCONFIG_LIBDIR = $$target.path
+-QMAKE_PKGCONFIG_INCDIR = /usr/include
++QMAKE_PKGCONFIG_INCDIR = $$PREFIX/include
+ QMAKE_PKGCONFIG_DESTDIR = pkgconfig
+ QMAKE_PKGCONFIG_VERSION = $$VERSION
+ 
+diff --git a/src/plugin/plugin.pro b/src/plugin/plugin.pro
+index d5c3723..d8e5bae 100644
+--- a/src/plugin/plugin.pro
++++ b/src/plugin/plugin.pro
+@@ -7,7 +7,7 @@ QT -= gui
+ TEMPLATE = lib
+ CONFIG += qt plugin hide_symbols
+ 
+-target.path = $$[QT_INSTALL_QML]/$$PLUGIN_IMPORT_PATH
++target.path = $$PREFIX/lib/qml/$$PLUGIN_IMPORT_PATH
+ INSTALLS += target
+ 
+ LIBS += -L../nemo-dbus -lnemodbus
