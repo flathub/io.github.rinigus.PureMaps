@@ -15,7 +15,8 @@
         "--talk-name=org.freedesktop.DBus",
         "--socket=pulseaudio",
         /* geoclue support */
-        "--system-talk-name=org.freedesktop.GeoClue2"
+        "--system-talk-name=org.freedesktop.GeoClue2",
+        "--talk-name=org.freedesktop.ScreenSaver"
     ],
     "cleanup": [
         "/include",
