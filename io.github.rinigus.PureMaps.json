@@ -142,6 +142,36 @@
             ]
         },
         {
+           "name": "libpopt",
+           "buildsystem": "autotools",
+            "sources": [
+                {
+                  "type": "archive",
+                  "url": "https://ftp.osuosl.org/pub/rpm/popt/releases/popt-1.x/popt-1.19.tar.gz",
+                  "sha256": "c25a4838fc8e4c1c8aacb8bd620edb3084a3d63bf8987fdad3ca2758c63240f9"
+                }
+            ]
+        },
+        {
+            "name": "picotts",
+            "buildsystem": "simple",
+            "build-commands": [
+                "make OPT_FLAG='-L/app/lib -O2' PREFIX=/ LANG_DIR=/app/share/picotts/lang",
+                "cp -p pico2wave /app/bin",
+                "mkdir -p /app/share/picotts/lang",
+                "cp -a lang/* /app/share/picotts/lang"
+            ],
+            "cflags": "-L/app/lib",
+            "cxxflags": "-L/app/lib",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/sailfishos-chum/picotts.git",
+                    "commit": "77e93983840fd54e649f4c4db3f9b3621cbb717f"
+                }
+            ]
+        },
+        {
             "name": "pure-maps",
             "buildsystem": "cmake-ninja",
 	    "builddir": true,
