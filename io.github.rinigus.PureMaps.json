@@ -142,6 +142,41 @@
             ]
         },
         {
+           "name": "libpopt",
+           "buildsystem": "autotools",
+            "sources": [
+                {
+                  "type": "archive",
+                  "url": "https://ftp.osuosl.org/pub/rpm/popt/releases/popt-1.x/popt-1.19.tar.gz",
+                  "sha256": "c25a4838fc8e4c1c8aacb8bd620edb3084a3d63bf8987fdad3ca2758c63240f9"
+                }
+            ]
+        },
+        {
+            "name": "picotts",
+            "buildsystem": "simple",
+            "subdir": "pico",
+            "build-commands": [
+                "./autogen.sh",
+                "./configure --prefix=/app",
+                "make OPT_FLAG='-L/app/lib -O2' PREFIX=/ LANG_DIR=/app/share/picotts/lang",
+                "make install"
+            ],
+            "cflags": "-L/app/lib",
+            "cxxflags": "-L/app/lib",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/ihuguet/picotts.git",
+                    "commit": "21089d223e177ba3cb7e385db8613a093dff74b5"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/picotts-argv.patch"
+                }
+            ]
+        },
+        {
             "name": "pure-maps",
             "buildsystem": "cmake-ninja",
 	    "builddir": true,
