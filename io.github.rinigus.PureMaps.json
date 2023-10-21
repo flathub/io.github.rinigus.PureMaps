@@ -155,19 +155,24 @@
         {
             "name": "picotts",
             "buildsystem": "simple",
+            "subdir": "pico",
             "build-commands": [
+                "./autogen.sh",
+                "./configure --prefix=/app",
                 "make OPT_FLAG='-L/app/lib -O2' PREFIX=/ LANG_DIR=/app/share/picotts/lang",
-                "cp -p pico2wave /app/bin",
-                "mkdir -p /app/share/picotts/lang",
-                "cp -a lang/* /app/share/picotts/lang"
+                "make install"
             ],
             "cflags": "-L/app/lib",
             "cxxflags": "-L/app/lib",
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/sailfishos-chum/picotts.git",
-                    "commit": "77e93983840fd54e649f4c4db3f9b3621cbb717f"
+                    "url": "https://github.com/ihuguet/picotts.git",
+                    "commit": "21089d223e177ba3cb7e385db8613a093dff74b5"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/picotts-argv.patch"
                 }
             ]
         },

@@ -1,0 +1,13 @@
+diff --git a/pico/bin/pico2wave.c b/pico/bin/pico2wave.c
+index 286ff31..90442dd 100644
+--- a/pico/bin/pico2wave.c
++++ b/pico/bin/pico2wave.c
+@@ -159,7 +159,7 @@ int main(int argc, const char *argv[]) {
+ 	const char **extra_argv;
+ 	extra_argv = poptGetArgs(optCon);
+     if(extra_argv) {
+-		text = (char *) &(*extra_argv)[0];
++		text = strdup((char *) &(*extra_argv)[0]);
+     } else {
+         // read from stdin
+         size_t len = myread(stdin, &text);
