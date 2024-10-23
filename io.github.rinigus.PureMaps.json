@@ -27,6 +27,39 @@
     ],
     "modules": [
         {
+            "name": "abseil",
+            "buildsystem": "cmake-ninja",
+    	    "builddir": true,
+            "config-opts": [
+                "-DBUILD_SHARED_LIBS=ON"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/abseil/abseil-cpp.git",
+                    "commit": "4447c7562e3bc702ade25105912dce503f0c4010"
+                }
+            ]
+        },
+        {
+            "name": "s2geometry",
+            "buildsystem": "cmake-ninja",
+	    "builddir": true,
+            "config-opts": [
+                "-DBUILD_PYTHON=OFF",
+                "-DBUILD_TESTS=OFF",
+                "-DBUILD_SHARED_LIBS=ON",
+                "-DBUILD_EXAMPLES=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/google/s2geometry.git",
+                    "commit": "713f9c27fed3085cc8dcf18a9d664c39227a0c45"
+                }
+            ]
+        },
+        {
             "name": "nemodbus",
             "buildsystem": "qmake",
             "sources": [
@@ -102,24 +135,6 @@
                     "type": "git",
                     "url": "https://github.com/rinigus/mapbox-gl-qml.git",
                     "commit": "7cb85afbf26369db3698ff34af84436cb0d897e7"
-                }
-            ]
-        },
-        {
-            "name": "s2geometry",
-            "buildsystem": "cmake-ninja",
-	    "builddir": true,
-            "config-opts": [
-                "-DBUILD_PYTHON=OFF",
-                "-DBUILD_TESTS=OFF",
-                "-DBUILD_SHARED_LIBS=ON",
-                "-DBUILD_EXAMPLES=OFF"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/google/s2geometry.git",
-                    "commit": "5b5eccd54a08ae03b4467e79ffbb076d0b5f221e"
                 }
             ]
         },
