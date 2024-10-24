@@ -27,6 +27,39 @@
     ],
     "modules": [
         {
+            "name": "abseil",
+            "buildsystem": "cmake-ninja",
+    	    "builddir": true,
+            "config-opts": [
+                "-DBUILD_SHARED_LIBS=ON"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/abseil/abseil-cpp.git",
+                    "commit": "4447c7562e3bc702ade25105912dce503f0c4010"
+                }
+            ]
+        },
+        {
+            "name": "s2geometry",
+            "buildsystem": "cmake-ninja",
+	    "builddir": true,
+            "config-opts": [
+                "-DBUILD_PYTHON=OFF",
+                "-DBUILD_TESTS=OFF",
+                "-DBUILD_SHARED_LIBS=ON",
+                "-DBUILD_EXAMPLES=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/google/s2geometry.git",
+                    "commit": "713f9c27fed3085cc8dcf18a9d664c39227a0c45"
+                }
+            ]
+        },
+        {
             "name": "nemodbus",
             "buildsystem": "qmake",
             "sources": [
@@ -74,9 +107,10 @@
             "name": "maplibre-gl-native-qt",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-		"-DMLN_QT_WITH_WIDGETS=OFF",
-		"-DMLN_QT_WITH_LOCATION=OFF",
-		"-DMLN_QT_WITH_INTERNAL_ICU=ON"
+                "-DMLN_QT_WITH_WIDGETS=OFF",
+                "-DMLN_QT_WITH_LOCATION=OFF",
+                "-DMLN_QT_WITH_INTERNAL_ICU=ON",
+                "-DMLN_WITH_WERROR=OFF"
             ],
             "post-install": [
                 "ln -s /app/include/qt5/* /app/include"
@@ -85,7 +119,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/maplibre/maplibre-native-qt.git",
-                    "commit": "85673cbe94d6ec0d9e7a35952375c24cb5f51589",
+                    "commit": "d929c783737120787b43417d9ef05da88da75dfd",
                     "disable-shallow-clone": true
                 }
             ]
@@ -100,25 +134,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/mapbox-gl-qml.git",
-                    "commit": "0ad5328c47cb717e42bbad49e6261808de8750a0"
-                }
-            ]
-        },
-        {
-            "name": "s2geometry",
-            "buildsystem": "cmake-ninja",
-	    "builddir": true,
-            "config-opts": [
-                "-DBUILD_PYTHON=OFF",
-                "-DBUILD_TESTING=OFF",
-                "-DBUILD_SHARED_LIBS=ON",
-                "-DBUILD_EXAMPLES=OFF"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/rinigus/s2geometry.git",
-                    "commit": "dacdf1d3b0f229d85f30a496f65edfd10049b2fb"
+                    "commit": "7cb85afbf26369db3698ff34af84436cb0d897e7"
                 }
             ]
         },
@@ -193,7 +209,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "1b577eaaebdfbcbaa3de70a25814ba5da1e7cbb1"
+                    "commit": "b594d2f5c480686a2b7df15eb565df3c2f51adff"
                 },
                 {
                     "type": "file",
