@@ -7,12 +7,10 @@
     "finish-args": [
         "--device=dri",
         "--share=ipc",
-        "--socket=x11",
         "--socket=wayland",
+        "--socket=fallback-x11",
         "--share=network",
         "--talk-name=io.github.rinigus.OSMScoutServer",
-        /* monitor availibility of OSM Scout Server */
-        "--talk-name=org.freedesktop.DBus",
         "--socket=pulseaudio",
         /* geoclue support */
         "--system-talk-name=org.freedesktop.GeoClue2",
@@ -170,14 +168,16 @@
             "name": "picotts",
             "buildsystem": "simple",
             "subdir": "pico",
+            "build-options": {
+                "cflags": "-L/app/lib",
+                "cxxflags": "-L/app/lib"
+            },
             "build-commands": [
                 "./autogen.sh",
                 "./configure --prefix=/app",
                 "make OPT_FLAG='-L/app/lib -O2' PREFIX=/ LANG_DIR=/app/share/picotts/lang",
                 "make install"
             ],
-            "cflags": "-L/app/lib",
-            "cxxflags": "-L/app/lib",
             "sources": [
                 {
                     "type": "git",
@@ -209,7 +209,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "b594d2f5c480686a2b7df15eb565df3c2f51adff"
+                    "commit": "cd2a0e90eb5bdb23bf69f6fe92ab3d4d2a3acf1e"
                 },
                 {
                     "type": "file",
