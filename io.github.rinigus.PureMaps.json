@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.rinigus.PureMaps",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-24.08",
+    "runtime-version": "5.15-25.08",
     "sdk": "org.kde.Sdk",
     "command": "io.github.rinigus.PureMaps",
     "finish-args": [
@@ -24,21 +24,6 @@
         "*.la"
     ],
     "modules": [
-        {
-            "name": "abseil",
-            "buildsystem": "cmake-ninja",
-    	    "builddir": true,
-            "config-opts": [
-                "-DBUILD_SHARED_LIBS=ON"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/abseil/abseil-cpp.git",
-                    "commit": "4447c7562e3bc702ade25105912dce503f0c4010"
-                }
-            ]
-        },
         {
             "name": "s2geometry",
             "buildsystem": "cmake-ninja",
@@ -193,18 +178,18 @@
         {
             "name": "pure-maps",
             "buildsystem": "cmake-ninja",
-	    "builddir": true,
-            "config-opts": [
-		"-DFLAVOR=kirigami",
-		"-DAPP_NAME=io.github.rinigus.PureMaps",
-		"-DUSE_BUNDLED_GPXPY=ON",
-		"-DMAPMATCHING_CHECK_RUNTIME=OFF",
-		"-DMAPMATCHING_AVAILABLE=ON",
-		"-DUSE_BUNDLED_GEOCLUE2=ON"
-	    ],
-	    "post-install": [
-		"ln -s /app/share /app/usr"
-	    ],
+		    "builddir": true,
+	            "config-opts": [
+			"-DFLAVOR=kirigami",
+			"-DAPP_NAME=io.github.rinigus.PureMaps",
+			"-DUSE_BUNDLED_GPXPY=ON",
+			"-DMAPMATCHING_CHECK_RUNTIME=OFF",
+			"-DMAPMATCHING_AVAILABLE=ON",
+			"-DUSE_BUNDLED_GEOCLUE2=ON"
+		    ],
+		    "post-install": [
+			"ln -s /app/share /app/usr"
+		    ],
             "sources": [
                 {
                     "type": "git",
@@ -219,5 +204,4 @@
             ]
         }
     ]
-
 }
