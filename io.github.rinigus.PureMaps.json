@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.rinigus.PureMaps",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-24.08",
+    "runtime-version": "5.15-25.08",
     "sdk": "org.kde.Sdk",
     "command": "io.github.rinigus.PureMaps",
     "finish-args": [
@@ -12,7 +12,6 @@
         "--share=network",
         "--talk-name=io.github.rinigus.OSMScoutServer",
         "--socket=pulseaudio",
-        /* geoclue support */
         "--system-talk-name=org.freedesktop.GeoClue2",
         "--talk-name=org.freedesktop.ScreenSaver"
     ],
@@ -24,21 +23,6 @@
         "*.la"
     ],
     "modules": [
-        {
-            "name": "abseil",
-            "buildsystem": "cmake-ninja",
-    	    "builddir": true,
-            "config-opts": [
-                "-DBUILD_SHARED_LIBS=ON"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/abseil/abseil-cpp.git",
-                    "commit": "4447c7562e3bc702ade25105912dce503f0c4010"
-                }
-            ]
-        },
         {
             "name": "s2geometry",
             "buildsystem": "cmake-ninja",
@@ -87,20 +71,7 @@
                 }
             ]
         },
-        {
-            "name": "python3-pyxdg",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyxdg"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/47/6e/311d5f22e2b76381719b5d0c6e9dc39cd33999adae67db71d7279a6d70f4/pyxdg-0.26.tar.gz",
-                    "sha256": "fe2928d3f532ed32b39c32a482b54136fe766d19936afc96c8f00645f9da1a06"
-                }
-            ]
-        },
+        "python3-pyxdg.json",
         {
             "name": "maplibre-gl-native-qt",
             "buildsystem": "cmake-ninja",
@@ -117,7 +88,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/maplibre/maplibre-native-qt.git",
-                    "commit": "d929c783737120787b43417d9ef05da88da75dfd",
+                    "commit": "e7114dec7f504b26b9f6acbc2a94645bc0535bd6",
                     "disable-shallow-clone": true
                 }
             ]
@@ -209,7 +180,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pure-maps.git",
-                    "commit": "cd2a0e90eb5bdb23bf69f6fe92ab3d4d2a3acf1e"
+                    "commit": "5807c1be2de77d1a0319e3d50f69d1f915c44ce2"
                 },
                 {
                     "type": "file",
