@@ -25,21 +25,6 @@
     ],
     "modules": [
         {
-            "name": "abseil",
-            "buildsystem": "cmake-ninja",
-    	    "builddir": true,
-            "config-opts": [
-                "-DBUILD_SHARED_LIBS=ON"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/abseil/abseil-cpp.git",
-                    "commit": "4447c7562e3bc702ade25105912dce503f0c4010"
-                }
-            ]
-        },
-        {
             "name": "s2geometry",
             "buildsystem": "cmake-ninja",
 	    "builddir": true,
