@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.rinigus.PureMaps",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-25.08",
+    "runtime-version": "5.15-24.08",
     "sdk": "org.kde.Sdk",
     "command": "io.github.rinigus.PureMaps",
     "finish-args": [
@@ -89,7 +89,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/maplibre/maplibre-native-qt.git",
-                    "commit": "d929c783737120787b43417d9ef05da88da75dfd",
+                    "commit": "e7114dec7f504b26b9f6acbc2a94645bc0535bd6",
                     "disable-shallow-clone": true
                 }
             ]
