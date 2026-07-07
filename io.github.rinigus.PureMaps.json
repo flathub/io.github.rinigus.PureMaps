@@ -71,7 +71,6 @@
                 }
             ]
         },
-        "python3-pyxdg.json",
         {
             "name": "maplibre-gl-native-qt",
             "buildsystem": "cmake-ninja",
